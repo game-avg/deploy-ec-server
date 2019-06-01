@@ -21,7 +21,7 @@ sudo su root
 mkdir -p /mnt/EC_server
 cd /mnt/EC_server
 ```
-然后运行下面的命令
+然后运行下面的命令，如果下载或检验文件出错，请重新执行此命令
 ```shell
 docker run --rm -ti \
   --name ec-uploadserver-init \
@@ -90,7 +90,6 @@ Blocks = 2
  10% 1568 - storage/png/scene/0dfd24de-5cd6-4a44-a0f6-3ba1701a81b1.png
 
 ```
-
 
 ### 2.运行服务
 先进入`cd /mnt/EC_server`目录
