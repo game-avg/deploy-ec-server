@@ -5,7 +5,7 @@ deploy a ec server
 - ubuntu 16.10 + / centos 7 +
 - systemd
 - docker 
->内存最好2G+ 硬盘大小10G+
+>内存最好2G+ 硬盘大小10G+。 如果内存1G的可以创建1个2G的交换文件[点击查看](https://cloud.tencent.com/developer/article/1156834)
 
 
 ### 切换到root用户
