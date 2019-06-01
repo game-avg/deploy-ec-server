@@ -6,6 +6,8 @@ deploy a ec server
 - systemd
 - docker 
 - git
+>内存最好2G+ 硬盘大小10G+
+
 
 ### 切换到root用户
 如果用的不是root用户， 需要切换到root用户
@@ -54,3 +56,24 @@ cd /mnt/EC_server
 ```shell
 sh auto-update.sh
 ```
+
+### 服务器参数
+> 需要懂docker 环境变量
+
+环境变量|说明|默认值
+:---|:----------|:-----
+HTTP_BODY_LIMIT|文件上传大小, "K, M"|"50M"
+USERNAME|管理界面的用户名| "admin"
+PASSWORD|管理界面的密码| "admin123"
+TOKEN|管理界面的二次确认密码| "admin123"
+
+>使用方法: 修改`run.sh`文件, 把上面的环境变量添加进去，或修改原来的
+
+### 服务器连接说明
+- 下载服务器补丁文件`url.zip`:  `/api/v1/download/url.zip`
+- 排行榜界面 `/api/v1/ranking`
+- 服务器报告 `/api/v1/manage/report`
+- 显示所有可用的地址:  `/api/v1/urls`
+
+>比如下载服务器补丁文件： `http://服务器ip:端口/api/v1/download/url.zip`  
+>排行界面： 浏览器打开`http://服务器ip:端口/api/v1/ranking` 其它同理 
