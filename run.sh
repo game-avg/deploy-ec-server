@@ -11,3 +11,4 @@ docker run -d --restart always \
   -p 1321:1321 \
   -v "$PWD/storage":/app/storage \
   ystyle/ec-uploadserver
+docker image prune -a -f
