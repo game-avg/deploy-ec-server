@@ -40,21 +40,16 @@ docker run --rm \
 
 ### 3.运行服务
 先进入`cd /mnt/EC_server`目录
-```$xslt
+```
 cd /mnt/EC_server
-```
-```
-sh run.sh
+sh ./run.sh
 ```
 
 ### 4. 自动更新
->因为目录服务器代码还不太稳定， 会经常改， 所以要经常更新到最新版本，用下面的脚本可以更新到最新
-先进入`cd /mnt/EC_server`目录
-```$xslt
-cd /mnt/EC_server
-```
+>因为目录服务器代码还不太稳定， 会经常改， 所以要经常更新到最新版本，用下面的脚本可以每天自动更新到最新版本
 ```shell
-sh auto-update.sh
+cd /mnt/EC_server
+sh ./auto-update.sh
 ```
 
 ### 服务器参数
