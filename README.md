@@ -4,7 +4,7 @@ deploy a ec server
 ### 必需依赖
 - ubuntu 16.10 + / centos 7 +
 - systemd
-- docker 
+- docker
 >内存最好2G+ 硬盘大小10G+。 如果内存1G的可以创建1个2G的交换文件[点击查看](https://cloud.tencent.com/developer/article/1156834)
 
 
@@ -14,6 +14,11 @@ deploy a ec server
 sudo su root
 ```
 然后输入自己的密码
+安装docker, 已安装的可以跳过
+```shell
+curl -sSL https://get.daocloud.io/docker | sh
+```
+
 
 ### 1.初始化数据
 创建文件夹， 然后进入`cd /mnt/EC_server`目录
@@ -60,7 +65,7 @@ storage.7z.006: OK
 storage.7z.007: OK
 sha256sum: WARNING: 1 computed checksum did NOT match
 ```
-然后是7z的解压过程, 解压完成就可以跳到下一步了
+然后是7z的解压过程, 解压完成就可以跳到下一步了， 有`Everything is Ok`说明解压完成了
 ```shell
 7-Zip [64] 16.02 : Copyright (c) 1999-2016 Igor Pavlov : 2016-05-21
 p7zip Version 16.02 (locale=C.UTF-8,Utf16=on,HugeFiles=on,64 bits,1 CPU Intel(R) Xeon(R) CPU E5-26xx v4 (406F1),ASM,AES-NI)
@@ -87,8 +92,12 @@ Method = LZMA2:26
 Solid = +
 Blocks = 2
 
- 10% 1568 - storage/png/scene/0dfd24de-5cd6-4a44-a0f6-3ba1701a81b1.png
+Everything is Ok                                                            
 
+Folders: 11
+Files: 4902
+Size:       6273336016
+Compressed: 1015367887
 ```
 
 ### 2.运行服务
@@ -100,10 +109,15 @@ sh ./run.sh
 
 ### 3.自动更新
 >因为目录服务器代码还不太稳定， 会经常改， 所以要经常更新到最新版本，用下面的脚本可以每天自动更新到最新版本
+
 ```shell
 cd /mnt/EC_server
-sh ./auto-update.sh
+sh ./auto-update-centos.sh
+sh ./auto-update-ubuntu.sh
 ```
+centos7 执行 `sh ./auto-update-centos.sh`
+
+ubuntu 执行 `sh ./auto-update-centos.sh`
 
 ### 服务器参数
 > 需要懂docker 环境变量
