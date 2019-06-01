@@ -1,0 +1,6 @@
+[Unit]
+Description=update and restart ec server
+
+[Service]
+Type=simple
+ExecStart=/mnt/EC_server/run.sh
