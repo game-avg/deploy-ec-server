@@ -23,12 +23,43 @@ cd /mnt/EC_server
 ```
 然后运行下面的命令
 ```shell
-docker run --rm \
+docker run --rm -ti \
   --name ec-uploadserver-init \
   -v /mnt/EC_server:/work \
   ystyle/deploy-ec-server
 ```
 > 要下载1G的数据， 如果服务器带宽小的话， 要下载很久， 这命令只需成功执行一次就行了，以后启动服务器看下一步
+
+下载完成结果如下， 都ok了说明下载完了
+```shell
+Download Results:
+gid   |stat|avg speed  |path/URI
+======+====+===========+=======================================================
+d68a59|OK  |       0B/s|/work/storage.7z.003
+6f734e|OK  |       0B/s|/work/storage.7z.001
+52effb|OK  |       0B/s|/work/storage.7z.004
+4d6e3e|OK  |       0B/s|/work/storage.7z.002
+aa5889|OK  |       0B/s|/work/SHASUMS256.txt
+efcd9b|OK  |       0B/s|/work/storage.7z.005
+4eb84d|OK  |       0B/s|/work/storage.7z.006
+ca5f6e|OK  |       0B/s|/work/storage.7z.007
+
+Status Legend:
+(OK):download completed.
+```
+后面有校验`sha256sum`的结果， 都OK的话说明下载成功，如果检验结果为FAILED， 要删掉FAILED的文件重新执行上面的命令
+
+如下面的`storage.7z.005`校验失败， 要删除这文件， 重新执行上边的命令
+```shell
+storage.7z.001: OK
+storage.7z.002: OK
+storage.7z.003: OK
+storage.7z.004: OK
+storage.7z.005: FAILED
+storage.7z.006: OK
+storage.7z.007: OK
+sha256sum: WARNING: 5 of 7 computed checksums did NOT match
+```
 
 ### 2.运行服务
 先进入`cd /mnt/EC_server`目录
