@@ -1,6 +1,6 @@
 FROM alpine
 RUN  apk --update add aria2 tzdata p7zip
-ADD . /APP
+ADD . /app
 VOLUME ["/app/storage"]
 WORKDIR /app
-RUN go build -v -o /go/src/app/app cmd/main.go
+ENTRYPOINT ./entrypoint.sh
