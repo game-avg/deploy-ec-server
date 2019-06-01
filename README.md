@@ -61,5 +61,5 @@ TOKEN|管理界面的二次确认密码| "admin123"
 - 服务器报告 `/api/v1/manage/report`
 - 显示所有可用的地址:  `/api/v1/urls`
 
->比如下载服务器补丁文件： `http://服务器ip:端口/api/v1/download/url.zip`  
->排行界面： 浏览器打开`http://服务器ip:端口/api/v1/ranking` 其它同理 
+>比如下载服务器补丁文件： `http://服务器ip:1321/api/v1/download/url.zip`  
+>排行界面： 浏览器打开`http://服务器ip:1321/api/v1/ranking` 其它同理 

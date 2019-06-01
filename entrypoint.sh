@@ -10,7 +10,7 @@ cd /work
 chmod +x /app/auto-update.sh
 chmod +x /app/run.sh
 # download files
-aria2c https://github.com/game-avg/deploy-ec-server/releases/latest/downloads.txt
+aria2c https://github.com/game-avg/deploy-ec-server/releases/download/files/downloads.txt
 aria2c -c -i  downloads.txt
 # check files sha256
 sha256sum -c SHASUMS256.txt
