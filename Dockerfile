@@ -1,6 +1,6 @@
 FROM alpine
 RUN  apk --update add aria2 tzdata p7zip
 ADD . /app
-VOLUME ["/app"]
+VOLUME ["/work"]
 WORKDIR /app
-ENTRYPOINT sh entrypoint.sh
+ENTRYPOINT sh /app/entrypoint.sh

@@ -5,7 +5,6 @@ deploy a ec server
 - ubuntu 16.10 + / centos 7 +
 - systemd
 - docker 
-- git  ubuntu 执行`sudo apt install git` centos执行 `yum install git`
 >内存最好2G+ 硬盘大小10G+
 
 
@@ -16,36 +15,28 @@ sudo su root
 ```
 然后输入自己的密码
 
-### 1.下载代码
-执行以下所有命令
+### 1.初始化数据
+创建文件夹， 然后进入`cd /mnt/EC_server`目录
 ```shell
 mkdir -p /mnt/EC_server
-git clone https://github.com/game-avg/deploy-ec-server.git /mnt/EC_server
-cd /mnt/EC_server
-chmod +x ./auto-update.sh
-chmod +x ./run.sh
-```
-### 2.初始化数据
-先进入`cd /mnt/EC_server`目录
-```shell
 cd /mnt/EC_server
 ```
 然后运行下面的命令
 ```shell
 docker run --rm \
   --name ec-uploadserver-init \
-  -v /mnt/EC_server":/app \
+  -v /mnt/EC_server:/work \
   ystyle/deploy-ec-server
 ```
 
-### 3.运行服务
+### 2.运行服务
 先进入`cd /mnt/EC_server`目录
 ```
 cd /mnt/EC_server
 sh ./run.sh
 ```
 
-### 4. 自动更新
+### 3.自动更新
 >因为目录服务器代码还不太稳定， 会经常改， 所以要经常更新到最新版本，用下面的脚本可以每天自动更新到最新版本
 ```shell
 cd /mnt/EC_server
