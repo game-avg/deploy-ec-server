@@ -14,7 +14,8 @@ deploy a ec server
 sudo su root
 ```
 然后输入自己的密码
-安装docker, 已安装的可以跳过
+
+### 安装docker, 已安装的可以跳过
 ```shell
 curl -sSL https://get.daocloud.io/docker | sh
 ```
