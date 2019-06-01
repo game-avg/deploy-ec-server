@@ -12,12 +12,7 @@ chmod +x /app/run.sh
 # download files
 aria2c -c --console-log-level=error --download-result=full https://github.com/game-avg/deploy-ec-server/releases/download/files/downloads.txt
 aria2c -c --console-log-level=error --download-result=full -i downloads.txt
-# check files sha256
+# check files sha256sum
 sha256sum -c SHASUMS256.txt
-EXCODE=$?
-if [ "$EXCODE" != "0" ]; then
-    echo "SHASUMS256 fail"
-    exit 1
-fi
 # Decompression
 7z x storage.7z.001

@@ -47,7 +47,7 @@ ca5f6e|OK  |       0B/s|/work/storage.7z.007
 Status Legend:
 (OK):download completed.
 ```
-后面有校验`sha256sum`的结果， 都OK的话说明下载成功，如果检验结果为FAILED， 要删掉FAILED的文件重新执行上面的命令
+接下来是校验`sha256sum`的结果， 都OK的话说明下载成功，如果检验结果为FAILED， 要删掉FAILED的文件重新执行上面的命令
 
 如下面的`storage.7z.005`校验失败， 要删除这文件， 重新执行上边的命令
 ```shell
@@ -58,8 +58,39 @@ storage.7z.004: OK
 storage.7z.005: FAILED
 storage.7z.006: OK
 storage.7z.007: OK
-sha256sum: WARNING: 5 of 7 computed checksums did NOT match
+sha256sum: WARNING: 1 computed checksum did NOT match
 ```
+然后是7z的解压过程, 解压完成就可以跳到下一步了
+```shell
+7-Zip [64] 16.02 : Copyright (c) 1999-2016 Igor Pavlov : 2016-05-21
+p7zip Version 16.02 (locale=C.UTF-8,Utf16=on,HugeFiles=on,64 bits,1 CPU Intel(R) Xeon(R) CPU E5-26xx v4 (406F1),ASM,AES-NI)
+
+Scanning the drive for archives:
+1 file, 157286400 bytes (150 MiB)
+
+Extracting archive: storage.7z.001
+--         
+Path = storage.7z.001
+Type = Split
+Physical Size = 157286400
+Volumes = 7
+Total Physical Size = 1015367887
+----
+Path = storage.7z
+Size = 1015367887
+--
+Path = storage.7z
+Type = 7z
+Physical Size = 1015367887
+Headers Size = 98655
+Method = LZMA2:26
+Solid = +
+Blocks = 2
+
+ 10% 1568 - storage/png/scene/0dfd24de-5cd6-4a44-a0f6-3ba1701a81b1.png
+
+```
+
 
 ### 2.运行服务
 先进入`cd /mnt/EC_server`目录
