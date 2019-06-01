@@ -28,6 +28,7 @@ docker run --rm \
   -v /mnt/EC_server:/work \
   ystyle/deploy-ec-server
 ```
+> 要下载1G的数据， 如果服务器带宽小的话， 要下载很久， 这命令只需成功执行一次就行了，以后启动服务器看下一步
 
 ### 2.运行服务
 先进入`cd /mnt/EC_server`目录
