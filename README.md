@@ -5,7 +5,7 @@ deploy a ec server
 - ubuntu 16.10 + / centos 7 +
 - systemd
 - docker 
-- git
+- git  ubuntu 执行`sudo apt install git` centos执行 `yum install git`
 >内存最好2G+ 硬盘大小10G+
 
 
@@ -34,7 +34,7 @@ cd /mnt/EC_server
 ```shell
 docker run --rm \
   --name ec-uploadserver-init \
-  -v "$PWD/storage":/app/storage \
+  -v /mnt/EC_server":/app \
   ystyle/deploy-ec-server
 ```
 
