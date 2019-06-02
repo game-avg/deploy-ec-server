@@ -133,7 +133,11 @@ TOKEN|管理界面的二次确认密码| "admin123"
 - 下载服务器补丁文件`url.zip`:  `/api/v1/download/url.zip`
 - 排行榜界面 `/api/v1/ranking`
 - 服务器报告 `/api/v1/manage/report`
+- 清除缓存 `/api/v1/manage/clear/cache`
 - 显示所有可用的地址:  `/api/v1/urls`
 
 >比如下载服务器补丁文件： `http://服务器ip:1321/api/v1/download/url.zip`  
 >排行界面： 浏览器打开`http://服务器ip:1321/api/v1/ranking` 其它同理 
+
+
+如果想公开服务器的话，点击[服务器发布](https://github.com/game-avg/deploy-ec-server/issues/1)提交你的服务器地址
