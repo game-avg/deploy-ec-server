@@ -130,10 +130,10 @@ TOKEN|管理界面的二次确认密码| "admin123"
 >使用方法: 修改`run.sh`文件, 把上面的环境变量添加进去，或修改原来的
 
 ### 服务器连接说明
-- 下载服务器补丁文件`url.zip`:  `/api/v1/download/url.zip`
+- 下载服务器补丁文件`url.zip`:  `/api/v1/download/url.zip` 可选参数: `?nocache` 可以重新生成补丁，比如换了ip时
 - 排行榜界面 `/api/v1/ranking`
 - 服务器报告 `/api/v1/manage/report`
-- 清除缓存 `/api/v1/manage/clear/cache`
+- 清除缓存 `/api/v1/manage/clear/cache?token=admin123` 
 - 显示所有可用的地址:  `/api/v1/urls`
 
 >比如下载服务器补丁文件： `http://服务器ip:1321/api/v1/download/url.zip`  
