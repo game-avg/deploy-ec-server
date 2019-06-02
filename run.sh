@@ -9,6 +9,7 @@ docker run -d --restart always \
   -e "USERNAME=admin" \
   -e "PASSWORD=admin123" \
   -p 1321:1321 \
+  -p 11321:11321 \
   -v "$PWD/storage":/app/storage \
   ystyle/ec-uploadserver
 echo "clear not use images"
