@@ -3,4 +3,4 @@ Description=update and restart ec server
 
 [Service]
 Type=simple
-ExecStart=/mnt/EC_server/run.sh
+ExecStart="sh /mnt/EC_server/run.sh"

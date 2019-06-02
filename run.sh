@@ -11,4 +11,5 @@ docker run -d --restart always \
   -p 1321:1321 \
   -v "$PWD/storage":/app/storage \
   ystyle/ec-uploadserver
+echo "clear not use images"
 docker image prune -a -f

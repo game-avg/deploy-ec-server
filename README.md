@@ -29,6 +29,7 @@ cd /mnt/EC_server
 ```
 然后运行下面的命令，如果下载或检验文件出错，请重新执行此命令
 ```shell
+docker pull ystyle/deploy-ec-server:latest && \
 docker run --rm -ti \
   --name ec-uploadserver-init \
   -v /mnt/EC_server:/work \
