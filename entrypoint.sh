@@ -9,6 +9,11 @@ cp -f /app/ec-server-update.service /work/ec-server-update.service
 cd /work
 chmod +x /work/auto-update.sh
 chmod +x /work/run.sh
+if [[ ${INIT_SCRIPT} = "true" ]]
+then
+  echo "update all script!"
+  exit 0
+fi
 # download files
 aria2c -c --console-log-level=error --download-result=full https://github.com/game-avg/deploy-ec-server/releases/download/files/downloads.txt
 aria2c -c --console-log-level=error --download-result=full -i downloads.txt
