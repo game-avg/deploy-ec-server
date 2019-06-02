@@ -118,6 +118,19 @@ cd /mnt/EC_server
 sh ./auto-update.sh
 ```
 
+### 只更新管理脚本
+初始化过数据后， 除非重装，不然不需要再次初始化， 所以只更新管理脚本的话，可以用这个命令
+
+```shell
+docker pull ystyle/deploy-ec-server:latest && \
+docker run --rm -ti \
+  --name ec-uploadserver-init \
+  -e "INIT_SCRIPT=true" \
+  -v /mnt/EC_server:/work \
+  ystyle/deploy-ec-server
+```
+>注意: 会覆盖run.sh, 如果有修改参数的话，更新后会被重置
+
 ### 服务器参数
 > 需要懂docker 环境变量
 
