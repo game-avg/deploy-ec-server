@@ -114,12 +114,8 @@ sh ./run.sh
 
 ```shell
 cd /mnt/EC_server
-sh ./auto-update-centos.sh
-sh ./auto-update-ubuntu.sh
+sh ./auto-update.sh
 ```
-centos7 执行 `sh ./auto-update-centos.sh`
-
-ubuntu 执行 `sh ./auto-update-centos.sh`
 
 ### 服务器参数
 > 需要懂docker 环境变量
