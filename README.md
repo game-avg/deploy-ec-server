@@ -140,6 +140,7 @@ HTTP_BODY_LIMIT|文件上传大小, "K, M"|"50M"
 USERNAME|管理界面的用户名| "admin"
 PASSWORD|管理界面的密码| "admin123"
 TOKEN|管理界面的二次确认密码| "admin123"
+SECRET|密钥，补丁和服务器密钥不一致的不能连接服务器,游戏需要重新打url补丁， 需要用`/api/v1/download/url.zip?nocache`重新导出补丁| ""
 NAME_SUFFIX|用户名必需以该变量定义的字符结尾(用户名可以修改这文件UserData\system\hn.dat)| ""
 
 >使用方法: 修改`run.sh`文件, 把上面的环境变量添加进去，或修改原来的
