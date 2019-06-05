@@ -10,7 +10,7 @@ docker run -d --restart always \
   -e "PASSWORD=admin123" \
   -p 1321:1321 \
   -p 11321:11321 \
-  -v "$PWD/storage":/app/storage \
+  -v "/mnt/EC_server/storage":/app/storage \
   ystyle/ec-uploadserver
 echo "clear not use images"
 docker image prune -a -f
