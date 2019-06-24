@@ -40,8 +40,12 @@ docker run --rm -ti \
 
 <details>
 <summary>展开查看下载时出现问题的处理</summary>
-<pre>
+  
+  
+  
+
 下载完成结果如下， 都ok了说明下载完了
+
 ```shell
 Download Results:
 gid   |stat|avg speed  |path/URI
@@ -105,7 +109,6 @@ Files: 4902
 Size:       6273336016
 Compressed: 1015367887
 ```
-</pre>
 </details>
 
 ### 2.运行服务
