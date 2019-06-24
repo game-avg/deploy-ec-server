@@ -38,6 +38,9 @@ docker run --rm -ti \
 ```
 > 要下载1G的数据， 如果服务器带宽小的话， 要下载很久， 这命令只需成功执行一次就行了，以后启动服务器看下一步
 
+<details>
+<summary>展开查看下载时出现问题的处理</summary>
+<pre>
 下载完成结果如下， 都ok了说明下载完了
 ```shell
 Download Results:
@@ -102,6 +105,8 @@ Files: 4902
 Size:       6273336016
 Compressed: 1015367887
 ```
+</pre>
+</details>
 
 ### 2.运行服务
 先进入`cd /mnt/EC_server`目录
